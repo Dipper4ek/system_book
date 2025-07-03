@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cb2c8f9-d820-4ef3-b6c0-3defeb2c0d47" name="Changes" comment="" />
+    <list default="true" id="9cb2c8f9-d820-4ef3-b6c0-3defeb2c0d47" name="Changes" comment="d">
+      <change afterPath="$PROJECT_DIR$/booking_app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/add_car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/available_cars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/car_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/customer_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/register_customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Dipper4ek"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Dipper4ek/system_book.git",
+    "accountId": "98b818b0-2e86-4b8e-8e40-cc899d745267"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
   <component name="ProjectId" id="2zN72vNs2cMW8dfkLSIEJYVC8Ss" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
@@ -40,6 +78,27 @@
       <option name="presentableId" value="Default" />
       <updated>1751559472867</updated>
     </task>
+    <task id="LOCAL-00001" summary="d">
+      <option name="closed" value="true" />
+      <created>1751559550676</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751559550676</updated>
+    </task>
+    <task id="LOCAL-00002" summary="d">
+      <option name="closed" value="true" />
+      <created>1751559686401</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751559686401</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="d" />
+    <option name="LAST_COMMIT_MESSAGE" value="d" />
   </component>
 </project>

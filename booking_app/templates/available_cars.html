@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Суперкари доступні для оренди</title>
+</head>
+<body>
+    <h1>Список доступних суперкарів</h1>
+    <ul>
+        {% for car in cars %}
+            <li>{{ car.brand }} {{ car.model }} — ${{ car.price_per_day }} / день</li>
+        {% empty %}
+            <li>На жаль, авто зараз недоступні</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
