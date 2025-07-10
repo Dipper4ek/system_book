@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cb2c8f9-d820-4ef3-b6c0-3defeb2c0d47" name="Changes" comment="d">
-      <change afterPath="$PROJECT_DIR$/booking_app/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/add_car.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/available_cars.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/car_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/customer_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/register_customer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/rental_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/system_book.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/system_book.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/add_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/add_car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/available_cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/available_cars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/car_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/car_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/customer_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/customer_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/register_customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/register_customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_management/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_management/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,21 +40,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Dipper4ek"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dipper4ek&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Dipper4ek/system_book.git",
-    "accountId": "98b818b0-2e86-4b8e-8e40-cc899d745267"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Dipper4ek/system_book.git&quot;,
+    &quot;accountId&quot;: &quot;98b818b0-2e86-4b8e-8e40-cc899d745267&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2zN72vNs2cMW8dfkLSIEJYVC8Ss" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,14 +63,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

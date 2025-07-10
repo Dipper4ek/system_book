@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Суперкари доступні для оренди</title>
-</head>
-<body>
-    <h1>Список доступних суперкарів</h1>
-    <ul>
-        {% for car in cars %}
-            <li>{{ car.brand }} {{ car.model }} — ${{ car.price_per_day }} / день</li>
-        {% empty %}
-            <li>На жаль, авто зараз недоступні</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Доступні авто{% endblock %}
+
+{% block content %}
+<h1>Доступні супер-кари для оренди</h1>
+<ul>
+    {% for car in cars %}
+        <li style="margin-bottom: 20px;">
+            <strong>{{ car.brand }} {{ car.model }}</strong> ({{ car.year }})<br>
+            Ціна: ${{ car.price_per_day }} / день<br>
+            {% if car.image %}
+                <img src="{{ car.image.url }}" width="300"><br>
+            {% endif %}
+            <a href="{% url 'rent_car' %}">
+                <button>Орендувати</button>
+            </a>
+        </li>
+    {% empty %}
+        <li>Наразі немає доступних авто.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
