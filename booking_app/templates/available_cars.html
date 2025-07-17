@@ -2,21 +2,29 @@
 {% block title %}Доступні авто{% endblock %}
 
 {% block content %}
-<h1>Доступні супер-кари для оренди</h1>
-<ul>
-    {% for car in cars %}
-        <li style="margin-bottom: 20px;">
-            <strong>{{ car.brand }} {{ car.model }}</strong> ({{ car.year }})<br>
-            Ціна: ${{ car.price_per_day }} / день<br>
-            {% if car.image %}
-                <img src="{{ car.image.url }}" width="300"><br>
-            {% endif %}
-            <a href="{% url 'rent_car' %}">
-                <button>Орендувати</button>
-            </a>
-        </li>
-    {% empty %}
-        <li>Наразі немає доступних авто.</li>
-    {% endfor %}
-</ul>
+<div class="container mt-5">
+    <h1 class="mb-4">Доступні супер-кари для оренди</h1>
+
+    <div class="row">
+        {% for car in cars %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    {% if car.image %}
+                        <img src="{{ car.image.url }}" class="card-img-top" alt="{{ car.brand }} {{ car.model }}">
+                    {% endif %}
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+                        <p class="card-text">Рік: {{ car.year }}</p>
+                        <p class="card-text">Ціна: <strong>${{ car.price_per_day }}</strong> / день</p>
+                        <a href="{% url 'rent_car' %}" class="btn btn-primary mt-auto">Орендувати</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info">Наразі немає доступних авто.</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

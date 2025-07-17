@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Оренда: {{ car.brand }} {{ car.model }}</h2>
+<div class="container mt-5">
+    <h2 class="mb-4">Оренда: {{ car.brand }} {{ car.model }}</h2>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Підтвердити оренду</button>
-</form>
+    <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-success">Підтвердити оренду</button>
+    </form>
+</div>
 {% endblock %}
