@@ -18,19 +18,15 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 from django.contrib import admin
 from django.urls import path
-from booking_app.views import add_car, Available_cars, home_page, car_success, customer_success, register_customer, create_rental
+from booking_app.views import add_car, Available_cars, home_page, car_success, customer_success, register_customer, create_rental, customer_login
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home_page, name='home'),
-    path('', home_page, name='home'),
-    path('available-cars/', Available_cars.as_view(), name='available_cars'),
-    path('add-car/', add_car, name='add_car'),
-    path('register-customer/', register_customer, name='register_customer'),
-    path('car-success/', car_success, name='car_success'),
-    path('customer-success/', customer_success, name='customer_success'),
-    path('rent-car/', create_rental, name='rent_car'),
+    path('', include('booking_app.urls'))
 ]
+
+admin.site.login_template = 'admin/login.html'
 
 
 

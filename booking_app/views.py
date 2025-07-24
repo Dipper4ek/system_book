@@ -2,6 +2,12 @@ from django.views.generic import ListView
 from .models import Car
 from django.shortcuts import render, redirect
 from .forms import CarForm, CustomerForm, RentalForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login
+from .forms import EmailLoginForm
+from django.contrib import messages
+from .models import Customer
+
 
 def add_car(request):
     if request.method == 'POST':
@@ -38,7 +44,7 @@ class Available_cars(ListView):
         return Car.objects.filter(is_available=True)
 
 
-
+@login_required
 def create_rental(request):
     if request.method == 'POST':
         form = RentalForm(request.POST)
@@ -56,3 +62,45 @@ def create_rental(request):
         form = RentalForm()
 
     return render(request, 'rental_form.html', {'form': form})
+
+
+
+def email_login_view(request):
+    if request.method == 'POST':
+        form = EmailLoginForm(request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('home')  # або куди потрібно
+    else:
+        form = EmailLoginForm()
+    return render(request, 'auth/customer_login.html', {'form': form})
+
+
+
+
+def customer_login(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        try:
+            customer = Customer.objects.get(email=email)
+            if customer.password == password:
+                request.session['customer_id'] = customer.id  # Зберігаємо сесію
+                return redirect('home')  # або інша сторінка
+            else:
+                messages.error(request, 'Невірний пароль')
+        except Customer.DoesNotExist:
+            messages.error(request, 'Користувача з таким email не знайдено')
+
+    return render(request, 'auth/customer_login.html')
+
+def profile_view(request):
+    if 'customer_id' not in request.session:
+        return redirect('login')
+    ...
+
+def customer_logout(request):
+    request.session.flush()
+    return redirect('login')

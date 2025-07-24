@@ -16,8 +16,9 @@ class Car(models.Model):
 
 class Customer(models.Model):
     full_name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20)
+    password = models.CharField(max_length=128, default='temp1234')
 
     def __str__(self):
         return f"{self.full_name} ({self.email})"

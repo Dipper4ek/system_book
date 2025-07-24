@@ -1,14 +1,10 @@
-<!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <!-- Додай це в <head> base.html, якщо ще не додано -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <meta charset="UTF-8">
     <title>{% block title %}Мій сайт{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Проста стилізація меню */
         nav {
             background-color: #333;
             padding: 10px;
@@ -37,12 +33,17 @@
         <a href="{% url 'available_cars' %}">Available Cars</a>
         <a href="{% url 'register_customer' %}">Register Customer</a>
         <a href="{% url 'rent_car' %}">Rental Form</a>
-        <a href='/admin/'>Admin Panel</a>
+        <a href="/admin/">Admin Panel</a>
+
+        {% if user.is_authenticated %}
+            <span style="color: white; margin-left: 30px;">Welcome, {{ user.username }}!</span>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
     </nav>
 
     <main>
         {% block content %}
-        <!-- Тут буде контент конкретної сторінки -->
         {% endblock %}
     </main>
 </body>

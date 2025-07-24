@@ -1,15 +1,34 @@
 from django import forms
 from .models import Car, Customer, Rental
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate
 
 class CarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = ['brand', 'model', 'year', 'price_per_day', 'horsepower', 'is_available', 'image']
 
+class EmailLoginForm(forms.Form):
+    email = forms.EmailField()
+    password = forms.CharField(widget=forms.PasswordInput)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        email = cleaned_data.get('email')
+        password = cleaned_data.get('password')
+
+        if email and password:
+            self.user = authenticate(email=email, password=password)
+            if self.user is None:
+                raise forms.ValidationError("Невірний email або пароль")
+        return cleaned_data
+
+    def get_user(self):
+        return self.user
 class CustomerForm(forms.ModelForm):
     class Meta:
         model = Customer
-        fields = ['full_name', 'email', 'phone_number']
+        fields = ['full_name', 'email', 'phone_number', 'password']
 
 class RentalForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
