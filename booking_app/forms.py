@@ -33,8 +33,17 @@ class CustomerForm(forms.ModelForm):
 class RentalForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Фільтруємо поле car, щоб показати тільки доступні машини
+
         self.fields['car'].queryset = Car.objects.filter(is_available=True)
+
+    start_date = forms.DateField(
+        input_formats=['%d.%m.%Y'],
+        widget=forms.DateInput(format='%d.%m.%Y', attrs={'placeholder': 'дд.мм.рррр'})
+    )
+    end_date = forms.DateField(
+        input_formats=['%d.%m.%Y'],
+        widget=forms.DateInput(format='%d.%m.%Y', attrs={'placeholder': 'дд.мм.рррр'})
+    )
 
     class Meta:
         model = Rental

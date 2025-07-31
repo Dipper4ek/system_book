@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cb2c8f9-d820-4ef3-b6c0-3defeb2c0d47" name="Changes" comment="d">
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/auth/customer_login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_app/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/static/icons/car-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_app/templates/login_success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/auth/customer_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/auth/customer_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/available_cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/available_cars.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_app/templates/home.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/booking_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking_management/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_management/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking_management/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_management/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car_images/windows-11-stock-purple-abstract-black-background-amoled-3840x2400-9056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car_images/windows-11-stock-purple-abstract-black-background-amoled-3840x2400-9056_ZFzTtQI.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +71,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Base PC\PycharmProjects\system_book\media\car_images" />
+      <recent name="C:\Users\Base PC\PycharmProjects\system_book\booking_app\static\icons" />
       <recent name="C:\Users\Base PC\PycharmProjects\system_book\booking_app\templates\auth" />
     </key>
   </component>
@@ -110,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752773164594</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="d">
+      <option name="closed" value="true" />
+      <created>1753378024636</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753378024636</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

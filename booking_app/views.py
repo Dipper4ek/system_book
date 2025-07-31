@@ -57,7 +57,6 @@ def create_rental(request):
             rental.car.is_available = False
             rental.car.save()
 
-            return redirect('success_page')
     else:
         form = RentalForm()
 
@@ -71,7 +70,7 @@ def email_login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')  # або куди потрібно
+            return redirect('login_success')
     else:
         form = EmailLoginForm()
     return render(request, 'auth/customer_login.html', {'form': form})

@@ -20,12 +20,15 @@ from django.contrib import admin
 from django.urls import path
 from booking_app.views import add_car, Available_cars, home_page, car_success, customer_success, register_customer, create_rental, customer_login
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('booking_app.urls'))
 ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 admin.site.login_template = 'admin/login.html'
 
 

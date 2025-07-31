@@ -3,19 +3,17 @@
 {% block title %}Вхід{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2>Увійти</h2>
-    <form method="post">
-        {% csrf_token %}
-        <div class="mb-3">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label>Пароль</label>
-            <input type="password" name="password" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Увійти</button>
-    </form>
-</div>
+<form method="post" autocomplete="off">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="email" name="user_email" autocomplete="new-email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Пароль</label>
+       <input type="password" name="user_pass" autocomplete="new-password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Увійти</button>
+</form>
+
 {% endblock %}
